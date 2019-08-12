@@ -16,3 +16,5 @@ chmod +x run.sh   # executable permissions, need to be done only once.
 ```
 
 * Next, visit  http://localhost:5000 in your browser, choose a file and then click, submit to see all the faces that have been recognized and tagged in the image.
+
+![Output](sample_input_and_output/tagged_image.jpg?raw=true "Title")
