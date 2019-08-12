@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--Meta-->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title> Minor Project 2</title>
+    <!--styles-->
+    <link href="https://fonts.googleapis.com/css?family=Signika" rel="stylesheet">
+    <link href="http://localhost:3000/style.css" rel="stylesheet"/>
+  </head>
+  <body>
+    <header>
+      <h1 class="welcome">Image Tagging using Facial Recognition</h1>
+      <hr/>
+    </header>
+
+    <main>
+      <div class="main-region">
+        <form action = "http://localhost:5000/upload" method = "POST" enctype = "multipart/form-data">
+          <input type="button" class="button-style overlay-button" value="Choose"/>
+          <input type="file" class="real-button" name="pic"/>
+          <input type="submit" class="button-style submit-button" value="Submit"/>
+        </form>
+      </div>
+      <br/>
+      <div class="main-region">
+        <span>
+          <img src="http://localhost:3000/tagged_image.jpg" height="400px" alt="Not found"/>
+        </span>
+        <span>
+          <p><u>{{ output_text }}</u></p>
+          <ul id="present">
+            {% for people in people_present %}
+              <li>{{people}}</li>
+            {% endfor %}
+          </ul>
+        </span>
+      </div>
+    </main>
+
+    <footer class="footer-area">
+      <br>
+       Made by Sudeepam.
+    </footer>
+  </body>
+</html>
